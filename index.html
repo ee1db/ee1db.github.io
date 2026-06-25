@@ -1,0 +1,53 @@
+<!--Made by Askedland https://youtube.com/@askedland-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="author" content="Askedland, https://youtube.com/@askedland askedland_ on discord">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ee1db</title>
+  </head>
+  <body>
+    <div class="loadingsite1" id="loadingid1" style="display: block;">
+      <h2 style="text-align: center; height: 100vh; justify-content: center; align-items: center; margin: 0; display: flex;" id="siteloader">Loading site please wait...</h2>
+    </div>
+    <div class="loadingelements" id="loadingelementsid" style="display: none;">
+      <h1 style="text-align: center; height: 100vh; justify-content: center; align-items: center; margin: 0; display: flex;">Loading elements</h1>
+    </div>
+    <div class="loadingscripts" id="loadingscriptsid" style="display: none;">
+      <h2 style="text-align: center; height: 100vh; justify-content: center; align-items: center; margin: 0; display: flex;">Loading scripts</h2>
+    </div>
+    <div class="doneloading" id="doneloadingid" style="display: none;">
+      <h1 style="text-align: center; height: 100vh; justify-content: center; align-items: center; margin: 0; display: flex;">Done loading please wait...</h1>
+    </div>
+    <div class="homepage" id="homepageid" style="display: none; height: 100vh; justify-content: center; align-items: center; display: none; flex-direction: column;">
+      <div style="text-align: center;">
+        <h1 style="margin: 0; color: red;">Development Paused</h1>
+        <h2 style="margin: 10px 0 0 0; font-weight: normal;">Reason: Development of Windows 10 Simulator <a href="https://windows10sim.github.io/" style="color: blue; text-decoration: underline;">https://windows10sim.github.io/</a></h2>
+        <h2 style="margin: 10px 0 0 0; font-weight: normal;">Error Code: STATUS_DEVELOPMENT_HANG</h2>
+      </div>
+    </div>
+    <script>
+const delay = ms => new Promise(res => setTimeout(res, ms));
+
+window.addEventListener('DOMContentLoaded', async () => {
+    try {
+        await delay(1000);
+        document.getElementById('loadingid1').style.display = 'none';
+        document.getElementById('loadingelementsid').style.display = 'block';
+        await delay(1000);
+        document.getElementById('loadingelementsid').style.display = 'none';
+        document.getElementById('loadingscriptsid').style.display = 'block';
+        await delay(421);
+        document.getElementById('loadingscriptsid').style.display = 'none';
+        document.getElementById('doneloadingid').style.display = 'block';
+        await delay(210);
+        document.getElementById('doneloadingid').style.display = 'none';
+        document.getElementById('homepageid').style.display = 'flex';
+    } catch (error) {
+        console.error("An element ID was missing from the HTML:", error);
+    }
+});
+    </script>
+  </body>
+</html>
